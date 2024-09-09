@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
+.contact-section {
+  margin: 20px;
+  text-align: center; /* Center the heading */
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #192248;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto; /* Center the heading */
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+}
+
+.contact-section p {
+  font-family: 'Sansita', sans-serif;
+}
+
+.section-title::before, 
+.section-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: #FF6600; /* Orange color for the lines */
+}
+
+.section-title::before {
+  left: -80px; /* Adjust this value as needed */
+}
+
+.section-title::after {
+  right: -80px; /* Adjust this value as needed */
+}
+
+.contact-info {
+  list-style-type: none; /* Remove list bullets */
+  padding: 0;
+  text-align: left; /* Left align the contact info */
+  margin: 20px 0;
+}
+
+.contact-info li {
+  display: flex; /* Align the icon and text horizontally */
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1.2rem; /* Slightly increase the font size */
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+}
+
+.contact-info li img {
+  margin-right: 10px; /* Space between icon and text */
+  width: 24px;
+  height: 24px;
+}
+
+.contact-info li a {
+  text-decoration: none;
+  color: inherit; /* Use the text color defined for the list items */
+}
+
+.contact-info li a:hover {
+  color: #FF6600; /* Orange color on hover */
+}
+
+.social-icons {
+  text-align: center; /* Center align the social icons */
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px; /* Space between social icons */
+}
+
+.social-icons img {
+  width: 32px; /* Adjust the size of the social icons */
+  height: 32px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .contact-info li {
+    font-size: 1rem; /* Adjust font size for medium screens */
+  }
+  .contact-info li img {
+    width: 20px;
+    height: 20px; /* Scale down icon size */
+  }
+  .social-icons img {
+    width: 28px;
+    height: 28px; /* Scale down social icon size */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    margin: 15px;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .contact-info li {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+  .contact-info li img {
+    width: 18px;
+    height: 18px; /* Further scale down icon size */
+  }
+  .social-icons img {
+    width: 24px;
+    height: 24px; /* Further scale down social icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    margin: 10px;
+  }
+  .section-title {
+    font-size: 1.4rem;
+  }
+  .contact-info li {
+    font-size: 0.8rem; /* Smaller font size for very small screens */
+  }
+  .contact-info li img {
+    width: 16px;
+    height: 16px; /* Smallest icon size for very small screens */
+  }
+  .social-icons img {
+    width: 20px;
+    height: 20px; /* Smallest social icon size for very small screens */
+  }
+}
+
+
+  

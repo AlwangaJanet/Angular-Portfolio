@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
+.hero {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/kaitlyn-baker-vZJdYl5JVXY-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.hero-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-nav .logo {
+  width: 50px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.hero-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.hero-nav ul li {
+  margin: 0 15px;
+}
+
+.hero-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.hero-nav ul li a:hover {
+  color: #FF5100;
+}
+
+.hero-content {
+  margin-top: 200px;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+}
+
+.highlight {
+  color: #FF5100;
+}
+
+.btn {
+  background-color: #192248;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  .hero-nav ul li a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center; /* Center content vertically on smaller screens */
+  }
+  .hero-content {
+    margin-top: 150px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  .btn {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    margin-top: 100px;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+  .hero-nav {
+    flex-direction: column; /* Stack navigation vertically */
+  }
+  .hero-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-nav ul li {
+    margin: 10px 0;
+  }
+}
+
+  

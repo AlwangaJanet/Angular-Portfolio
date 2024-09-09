@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
+.about {
+  padding: 50px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  font-size: 2rem;
+  color: #192248;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.about h2::before,
+.about h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: #FF6600;
+}
+
+.about h2::before {
+  left: -80px;
+}
+
+.about h2::after {
+  right: -80px;
+
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px; /* Optional: set a maximum width for the content */
+  margin: 0 auto;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.about-content p {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  max-width: 600px; /* Limit the width of the paragraph for better alignment */
+  margin: 0; /* Remove default margins */
+  line-height: 1.6; /* Improve line spacing for readability */
+  text-align: center; /* Center align the text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about h2 {
+    font-size: 22px;
+  }
+  .about-content {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center text alignment for stacked layout */
+  }
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    margin-right: 0; /* Remove right margin when stacked */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+  .about-content p {
+    max-width: 500px; /* Adjust max width for better readability on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 30px; /* Reduce padding on smaller screens */
+  }
+  .about h2 {
+    font-size: 20px;
+  }
+  .about-content {
+    padding: 0 10px; /* Add padding for small screens */
+  }
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px; /* Adjust margin for small screens */
+  }
+  .about-content p {
+    max-width: 400px; /* Adjust max width for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 20px; /* Further reduce padding */
+  }
+  .about h2 {
+    font-size: 18px;
+  }
+  .about-content p {
+    font-size: 14px; /* Adjust font size for very small screens */
+    line-height: 1.4; /* Adjust line height for readability */
+  }
+}
+
+  

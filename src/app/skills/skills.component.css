@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
+.skills {
+  padding: 20px;
+  text-align: center;
+}
+
+.skills h2 {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  font-size: 2rem;
+  color: #192248;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.skills h2::before,
+.skills h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: #FF6600;
+}
+
+.skills h2::before {
+  left: -80px;
+}
+
+.skills h2::after {
+  right: -80px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.skill-info p {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  margin: 0; /* Remove default margins */
+}
+
+.skill-bar {
+  width: 250px; /* Adjusted width to make the bars longer */
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+  height: 10px;
+  position: relative;
+}
+
+.bar-fill {
+  background-color: #FF6600;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .skills h2 {
+    font-size: 22px;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr); /* Stack grid items in a single column */
+  }
+  .skill img {
+    width: 40px;
+    height: 40px;
+  }
+  .skill-bar {
+    width: 200px; /* Adjust bar width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 15px;
+  }
+  .skills h2 {
+    font-size: 20px;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr); /* Stack grid items in a single column */
+  }
+  .skill img {
+    width: 35px;
+    height: 35px;
+  }
+  .skill-bar {
+    width: 180px; /* Adjust bar width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 10px; /* Further reduce padding */
+  }
+  .skills h2 {
+    font-size: 18px;
+  }
+  .skill img {
+    width: 30px;
+    height: 30px;
+  }
+  .skill-bar {
+    width: 150px; /* Adjust bar width for very small screens */
+  }
+}
+
+
+

@@ -1,0 +1,106 @@
+/* Apply Sansita font to the entire services section */
+.services-section {
+  text-align: center;
+  margin: 20px;
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+}
+
+.section-title {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  font-size: 2rem;
+  color: #192248;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.section-title::before, .section-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: #FF6600; /* Orange color for the lines */
+}
+
+.section-title::before {
+  left: -80px;
+}
+
+.section-title::after {
+  right: -80px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  grid-gap: 20px; /* Space between columns */
+  margin-top: 20px;
+}
+
+.service {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+  position: relative; /* Required for pseudo-element positioning */
+  overflow: hidden; /* Ensure pseudo-element is contained within the card */
+}
+
+.service h3 {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #192248;
+}
+
+.service h3 img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  margin: 10px 0;
+}
+
+/* Hover effect */
+.service:hover {
+  background-color: #192248; /* Change background color on hover */
+  color: white; /* Change text color to ensure readability */
+}
+
+.service:hover h3 {
+  color: white; /* Ensure the heading remains visible on dark background */
+}
+
+.service:hover ul li {
+  color: white; /* Ensure the list items remain visible on dark background */
+}
+
+/* Media Query for Tablets (Two Columns) */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns on medium screens (tablets) */
+  }
+}
+
+/* Media Query for Mobile Devices (One Column) */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* One column on small screens (mobile phones) */
+  }
+}
+
+  
+  
+  

@@ -1,0 +1,89 @@
+/* Apply Sansita font to the entire projects section */
+.projects {
+  margin: 20px;
+  text-align: center; /* Center-align the heading and lines */
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+}
+
+.projects h2 {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  font-size: 2rem;
+  color: #192248;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  font-weight: bold;
+  margin-bottom: 40px; /* Add space below the heading */
+}
+
+.projects h2::before,
+.projects h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: #FF6600; /* Orange color for the lines */
+}
+
+.projects h2::before {
+  left: -80px; /* Adjust to position line before the heading */
+}
+
+.projects h2::after {
+  right: -80px; /* Adjust to position line after the heading */
+}
+
+/* Grid layout for project list */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Space between grid items */
+  padding: 0;
+  position: relative;
+}
+
+/* Styling each project */
+.project {
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+  position: relative; /* Required for pseudo-element positioning */
+  overflow: hidden; /* Ensure pseudo-element is contained within the card */
+}
+
+.project h3 {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: #FF6600;
+}
+
+.project p {
+  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  font-size: 1rem;
+  margin: 10px 0 0;
+  color:#192248;
+}
+
+/* Hover effect */
+.project:hover {
+  background-color: #192248; /* Change background color on hover */
+  color: white; /* Change text color to ensure readability */
+}
+
+.project:hover h3,
+.project:hover p {
+  color: white; /* Ensure text remains visible on dark background */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .project-list {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
+

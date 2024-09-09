@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap');
+
+.footer {
+    background-color: #192248;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-nav {
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-nav a:hover {
+    color: #FF6600; /* Orange color on hover */
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-info {
+    font-size: 0.9rem;
+}
+
+.footer-info p {
+    margin: 10px 0;
+}
+
+.footer-info a {
+    color: #FF6600;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .footer-nav a {
+        margin: 0 10px; /* Reduce margin for medium screens */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+    .footer-social img {
+        width: 20px; /* Reduce size of social icons */
+        height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 15px; /* Reduce padding */
+    }
+    .footer-nav a {
+        display: block;
+        margin: 10px 0; /* Stack links vertically */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+    .footer-social img {
+        width: 18px; /* Further reduce size of social icons */
+        height: 18px;
+    }
+    .footer-info {
+        font-size: 0.8rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 10px; /* Further reduce padding */
+    }
+    .footer-nav a {
+        margin: 8px 0; /* Reduce margin for very small screens */
+        font-size: 0.8rem; /* Further adjust font size */
+    }
+    .footer-social img {
+        width: 16px; /* Smallest size for social icons */
+        height: 16px;
+    }
+    .footer-info {
+        font-size: 0.7rem; /* Smallest font size */
+    }
+}
+
