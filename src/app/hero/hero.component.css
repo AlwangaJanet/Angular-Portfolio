@@ -44,12 +44,13 @@
 }
 
 .hero-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
+  transition: transform 0.3s ease-in-out;
 }
 
 .hero-nav ul li {
@@ -64,6 +65,50 @@
 
 .hero-nav ul li a:hover {
   color: #FF5100;
+}
+
+/* Responsive Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+/* Hide navigation links by default on small screens */
+.hero-nav ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.hero-nav ul.show {
+  display: flex;
+}
+
+/* Always display navigation on larger screens */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .hero-nav ul {
+    display: flex !important;
+    position: static;
+    background: none;
+    flex-direction: row;
+  }
 }
 
 .hero-content {
@@ -123,6 +168,10 @@
   .btn {
     padding: 8px 16px;
   }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
@@ -135,16 +184,14 @@
   .hero-content h2 {
     font-size: 1.2rem;
   }
-  .hero-nav {
-    flex-direction: column; /* Stack navigation vertically */
-  }
   .hero-nav ul {
-    flex-direction: column;
-    align-items: center;
+    width: 90%;
+    left: 5%;
   }
   .hero-nav ul li {
     margin: 10px 0;
   }
 }
+
 
   
