@@ -87,3 +87,21 @@
   }
 }
 
+ /* Orange button style */
+ .project-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #FF6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #e65c00;
+  color: white;
+}
+
