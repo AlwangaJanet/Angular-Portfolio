@@ -1,106 +1,83 @@
-/* Apply Sansita font to the entire services section */
+
 .services-section {
   text-align: center;
-  margin: 20px;
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  padding: 80px 20px;
+  background-color: var(--bg-page-alt);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px;
+  color: var(--text-primary);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin: 0 0 8px;
 }
 
 .section-title {
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  font-family: var(--font-heading);
   font-size: 2rem;
-  color: #192248;
-  position: relative;
-  display: inline-block;
-  padding: 0 20px;
-  font-weight: bold;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
 }
 
-.section-title::before, .section-title::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 60px;
-  height: 2px;
-  background-color: #FF6600; /* Orange color for the lines */
-}
-
-.section-title::before {
-  left: -80px;
-}
-
-.section-title::after {
-  right: -80px;
+.intro {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 500px;
+  margin: 12px auto 40px;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-  grid-gap: 20px; /* Space between columns */
-  margin-top: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .service {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid #e1e1e1;
-  border-radius: 50px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
-  position: relative; /* Required for pseudo-element positioning */
-  overflow: hidden; /* Ensure pseudo-element is contained within the card */
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  border-radius: 12px;
+  text-align: left;
+  transition: border-color 0.2s ease;
+}
+
+.service:hover {
+  border-color: var(--accent);
 }
 
 .service h3 {
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #192248;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 14px;
 }
 
-.service h3 img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
-ul {
+.service ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-ul li {
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
-  margin: 10px 0;
+.service ul li {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin: 8px 0;
+  line-height: 1.5;
 }
 
-/* Hover effect */
-.service:hover {
-  background-color: #192248; /* Change background color on hover */
-  color: white; /* Change text color to ensure readability */
-}
-
-.service:hover h3 {
-  color: white; /* Ensure the heading remains visible on dark background */
-}
-
-.service:hover ul li {
-  color: white; /* Ensure the list items remain visible on dark background */
-}
-
-/* Media Query for Tablets (Two Columns) */
 @media (max-width: 992px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns on medium screens (tablets) */
-  }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Media Query for Mobile Devices (One Column) */
 @media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr; /* One column on small screens (mobile phones) */
-  }
+  .services-grid { grid-template-columns: 1fr; }
 }
-
-  
-  
-  

@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RevealOnScrollDirective } from '../shared/reveal-on-scroll.directive';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-certifications',
   standalone: true,
   imports: [RevealOnScrollDirective],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  templateUrl: './certifications.component.html',
+  styleUrl: './certifications.component.css'
 })
-export class AboutComponent { }
+export class CertificationsComponent { }

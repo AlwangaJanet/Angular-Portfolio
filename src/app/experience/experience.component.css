@@ -1,10 +1,10 @@
 
-.skills {
+.experience {
   padding: 80px 20px;
   text-align: center;
   background-color: var(--bg-page-alt);
   background-image:
-    radial-gradient(circle at 10% 90%, var(--glow-blue), transparent 50%),
+    radial-gradient(circle at 12% 15%, var(--glow-blue), transparent 50%),
     linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: auto, 32px 32px, 32px 32px;
@@ -26,52 +26,59 @@
   color: var(--text-primary);
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 1000px;
+.timeline {
+  max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   text-align: left;
 }
 
-.skill-category {
+.entry {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  padding: 20px 24px;
+  padding: 22px 26px;
 }
 
-.skill-category.secondary {
-  opacity: 0.85;
-}
-
-.skill-category h3 {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  margin: 0 0 14px;
-}
-
-.tags {
+.entry-header {
   display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 4px;
 }
 
-.tag {
+.entry-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.date {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  background: var(--bg-page);
-  border: 1px solid var(--border-color);
-  color: var(--accent);
-  padding: 5px 12px;
-  border-radius: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
+.company {
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+.entry ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+}
+
+.entry li {
+  font-size: 0.9rem;
+  line-height: 1.7;
 }

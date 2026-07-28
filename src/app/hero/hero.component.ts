@@ -1,19 +1,38 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { Component, OnInit, inject } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { ThemeService } from '../shared/theme.service';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [RouterLink,RouterModule,RouterOutlet,CommonModule],
+  imports: [CommonModule],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  styleUrls: ['./hero.component.css']
 })
-export class HeroComponent {
+export class HeroComponent implements OnInit {
   isMenuOpen = false;
+  isAvailable = true;
 
-  toggleMenu() {
+  private document = inject(DOCUMENT);
+  themeService = inject(ThemeService);
+
+  ngOnInit(): void {
+    this.themeService.init();
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggle();
+  }
+
+  toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  scrollTo(sectionId: string): void {
+    const el = this.document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.isMenuOpen = false;
+    }
+  }
 }

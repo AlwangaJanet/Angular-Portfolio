@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { RevealOnScrollDirective } from '../shared/reveal-on-scroll.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [RouterLink,RouterOutlet,RouterModule],
+  imports: [RevealOnScrollDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContactComponent {
-
-}
+export class ContactComponent { }

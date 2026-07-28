@@ -1,30 +1,72 @@
 <section class="hero">
+  <!-- Navigation Bar -->
   <nav class="hero-nav">
-    <img src="../../assets/thriftsbyAvie_Logo.jpg" alt="Logo" class="logo" />
-    
-    <!-- Menu Toggle Button -->
-    <button class="menu-toggle" (click)="toggleMenu()">
-      ☰ <!-- Hamburger Icon -->
-    </button>
-    
+    <div class="logo">JA</div>
+
     <!-- Navigation Links -->
     <ul [class.show]="isMenuOpen">
-      <li><a [routerLink]="['/home']" fragment="home">Home</a></li>
-      <li><a [routerLink]="['/about']" fragment="about">About</a></li>
-      <li><a [routerLink]="['/skills']" fragment="skills">Skills</a></li>
-      <li><a [routerLink]="['/projects']" fragment="projects">Projects</a></li>
-      <li><a [routerLink]="['/services']" fragment="services">Services</a></li>
-      <li><a [routerLink]="['/contact']" fragment="contact">Contact</a></li>
+      <li><a href="#home" (click)="scrollTo('home')">Home</a></li>
+      <li><a href="#about" (click)="scrollTo('about')">About</a></li>
+      <li><a href="#skills" (click)="scrollTo('skills')">Skills</a></li>
+      <li><a href="#experience" (click)="scrollTo('experience')">Experience</a></li>
+      <li><a href="#certifications" (click)="scrollTo('certifications')">Certifications</a></li>
+      <li><a href="#projects" (click)="scrollTo('projects')">Projects</a></li>
+      <li><a href="#contact" (click)="scrollTo('contact')">Contact</a></li>
     </ul>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle theme">
+      <span *ngIf="themeService.theme === 'dark'">☀️</span>
+      <span *ngIf="themeService.theme === 'light'">🌙</span>
+    </button>
+
+    <!-- Menu Toggle for Mobile -->
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">☰</button>
   </nav>
 
+  <!-- Hero Content -->
   <div class="hero-content">
-    <h1>Hi There! My Name is Janet Alwanga</h1>
-    <h2>I'm a <span class="highlight">Junior Full Stack Developer</span></h2>
-    <a href="https://drive.google.com/file/d/1BFAULqiXapK-XkOywapBvM8flbFMSqRW/view?usp=drive_link" download class="btn">Download CV</a>
+    <p class="eyebrow">cloud infrastructure engineer</p>
+
+    <h1>Janet Alwanga builds and manages hybrid cloud infrastructure.</h1>
+
+    <p class="subtext">
+      Cloud engineering, virtualization, systems administration, and infrastructure
+      automation — with a background in data analysis and software development.
+    </p>
+
+    <div *ngIf="isAvailable" class="availability">
+      <span class="dot"></span>
+      Open to opportunities
+    </div>
+
+    <div class="hero-buttons">
+      <a
+        href="https://drive.google.com/file/d/1kunNuOPmz1VEqfU56KlZ6StLcTncW-_n/view?usp=sharing"
+        
+        target="_blank"
+        class="btn primary"
+        >Download CV</a
+      >
+      <a (click)="scrollTo('about')" class="btn secondary">Learn more ↓</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <p class="stat-label">Based in</p>
+        <p class="stat-value">Nairobi, Kenya</p>
+      </div>
+      <div class="stat">
+        <p class="stat-label">Certified</p>
+        <p class="stat-value">AWS · KCNA</p>
+      </div>
+      <div class="stat">
+        <p class="stat-label">Focus</p>
+        <p class="stat-value">Cloud infra + automation</p>
+      </div>
+    </div>
   </div>
+
+  <!-- Scroll Down Indicator -->
+  <div class="scroll-down">⬇</div>
 </section>
-
-
-  
-  

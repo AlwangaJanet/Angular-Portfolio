@@ -1,115 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
 
-.about {
-  padding: 50px;
+.section {
+  padding: 80px 20px;
   text-align: center;
+  background-color: var(--bg-page);
+  background-image:
+    radial-gradient(circle at 90% 10%, var(--glow-green), transparent 50%),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: auto, 32px 32px, 32px 32px;
+  color: var(--text-primary);
 }
 
-.about h2 {
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+/* Section heading */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+
+.section-heading h2 {
+  font-family: var(--font-heading);
   font-size: 2rem;
-  color: #192248;
-  font-weight: bold;
+  font-weight: 500;
+  margin: 0 0 50px;
+  color: var(--text-primary);
+}
+
+/* About Layout */
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Image section */
+.about-image {
   position: relative;
-  display: inline-block;
+  flex: 1;
+  max-width: 380px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--accent);
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Card section */
+.about-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1.2;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
-.about h2::before,
-.about h2::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 60px;
-  height: 2px;
-  background-color: #FF6600;
-}
-
-.about h2::before {
-  left: -80px;
-}
-
-.about h2::after {
-  right: -80px;
-
-}
-
-.about-content {
+.avatar {
+  background: var(--accent-fill);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 800px; /* Optional: set a maximum width for the content */
-  margin: 0 auto;
-  text-align: left; /* Align text to the left for better readability */
+  flex-shrink: 0;
 }
 
-.profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-right: 20px;
-  flex-shrink: 0; /* Prevent the image from shrinking */
+.about-card h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--text-primary);
 }
 
-.about-content p {
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
-  max-width: 600px; /* Limit the width of the paragraph for better alignment */
-  margin: 0; /* Remove default margins */
-  line-height: 1.6; /* Improve line spacing for readability */
-  text-align: center; /* Center align the text */
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 2px 0 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .about h2 {
-    font-size: 22px;
-  }
-  .about-content {
-    flex-direction: column; /* Stack content vertically */
-    text-align: center; /* Center text alignment for stacked layout */
-  }
-  .profile-image {
-    width: 120px;
-    height: 120px;
-    margin-right: 0; /* Remove right margin when stacked */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
-  }
-  .about-content p {
-    max-width: 500px; /* Adjust max width for better readability on tablets */
-  }
+.description {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-size: 0.97rem;
 }
 
-@media (max-width: 768px) {
-  .about {
-    padding: 30px; /* Reduce padding on smaller screens */
-  }
-  .about h2 {
-    font-size: 20px;
-  }
-  .about-content {
-    padding: 0 10px; /* Add padding for small screens */
-  }
-  .profile-image {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 15px; /* Adjust margin for small screens */
-  }
-  .about-content p {
-    max-width: 400px; /* Adjust max width for small screens */
-  }
+/* Stats */
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  border-top: 1px solid var(--border-color-soft);
+  padding-top: 20px;
 }
 
-@media (max-width: 480px) {
-  .about {
-    padding: 20px; /* Further reduce padding */
-  }
-  .about h2 {
-    font-size: 18px;
-  }
-  .about-content p {
-    font-size: 14px; /* Adjust font size for very small screens */
-    line-height: 1.4; /* Adjust line height for readability */
-  }
+.stat-box {
+  flex: 1;
+  text-align: center;
 }
 
-  
+.stat-num {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 0 0 4px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .about-wrapper { flex-direction: column; align-items: center; }
+  .about-card { width: 100%; box-sizing: border-box; }
+}

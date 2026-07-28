@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg-page: #0d1117;
+  --bg-page-alt: #0f1419;
+  --bg-surface: #161b22;
+
+  --border-color: #30363d;
+  --border-color-soft: #21262d;
+
+  --text-primary: #f4f4f5;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+
+  --accent: #58a6ff;
+  --accent-hover: #79b8ff;
+  --accent-fill: #1f6feb;
+
+  --green-bg: #0f2e1f;
+  --green-text: #4ade80;
+  --green-border: #14532d;
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --grid-line: rgba(110, 150, 200, 0.07);
+  --glow-blue: rgba(88, 166, 255, 0.16);
+  --glow-green: rgba(63, 185, 80, 0.12);
+}
+
+:root[data-theme='light'] {
+  --bg-page: #ffffff;
+  --bg-page-alt: #f6f8fa;
+  --bg-surface: #ffffff;
+
+  --border-color: #d0d7de;
+  --border-color-soft: #e5e9ee;
+
+  --text-primary: #1f2328;
+  --text-secondary: #57606a;
+  --text-muted: #6e7781;
+
+  --accent: #0969da;
+  --accent-hover: #0550ae;
+  --accent-fill: #0969da;
+
+  --green-bg: #dafbe1;
+  --green-text: #1a7f37;
+  --green-border: #4ac26b;
+
+  --grid-line: rgba(9, 105, 218, 0.06);
+  --glow-blue: rgba(9, 105, 218, 0.08);
+  --glow-green: rgba(26, 127, 55, 0.07);
+}
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

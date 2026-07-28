@@ -1,107 +1,97 @@
-/* Apply Sansita font to the entire projects section */
+
 .projects {
-  margin: 20px;
-  text-align: center; /* Center-align the heading and lines */
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+  padding: 80px 20px;
+  text-align: center;
+  background-color: var(--bg-page);
+  background-image:
+    radial-gradient(circle at 88% 12%, var(--glow-green), transparent 50%),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: auto, 32px 32px, 32px 32px;
+  color: var(--text-primary);
 }
 
-.projects h2 {
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+
+.section-heading h2 {
+  font-family: var(--font-heading);
   font-size: 2rem;
-  color: #192248;
-  position: relative;
-  display: inline-block;
-  padding: 0 20px;
-  font-weight: bold;
-  margin-bottom: 40px; /* Add space below the heading */
+  font-weight: 500;
+  margin: 0 0 40px;
+  color: var(--text-primary);
 }
 
-.projects h2::before,
-.projects h2::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 60px;
-  height: 2px;
-  background-color: #FF6600; /* Orange color for the lines */
+.group-title {
+  max-width: 1000px;
+  margin: 40px auto 20px;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
 }
 
-.projects h2::before {
-  left: -80px; /* Adjust to position line before the heading */
-}
-
-.projects h2::after {
-  right: -80px; /* Adjust to position line after the heading */
-}
-
-/* Grid layout for project list */
 .project-list {
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 20px; /* Space between grid items */
-  padding: 0;
-  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: left;
 }
 
-/* Styling each project */
 .project {
-  border: 1px solid #ddd;
-  border-radius: 50px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease; /* Smooth transition for background color change */
-  position: relative; /* Required for pseudo-element positioning */
-  overflow: hidden; /* Ensure pseudo-element is contained within the card */
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
 }
 
-.project h3 {
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
-  font-size: 1.5rem;
-  margin-top: 0;
-  color: #FF6600;
+.project h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 10px;
 }
 
 .project p {
-  font-family: 'Sansita', sans-serif; /* Apply Sansita font */
-  font-size: 1rem;
-  margin: 10px 0 0;
-  color:#192248;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 10px;
 }
 
-/* Hover effect */
-.project:hover {
-  background-color: #192248; /* Change background color on hover */
-  color: white; /* Change text color to ensure readability */
+.tech {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
 }
 
-.project:hover h3,
-.project:hover p {
-  color: white; /* Ensure text remains visible on dark background */
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-  .project-list {
-    grid-template-columns: 1fr; /* 1 column on small screens */
-  }
-}
-
- /* Orange button style */
- .project-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #FF6600;
-  color: white;
+.project-button {
+  margin-top: auto;
+  align-self: flex-start;
+  color: var(--accent);
   text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  padding: 7px 16px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .project-button:hover {
-  background-color: #e65c00;
-  color: white;
+  border-color: var(--accent);
 }
 
+@media (max-width: 768px) {
+  .project-list { grid-template-columns: 1fr; }
+}

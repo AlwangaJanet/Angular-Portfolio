@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap');
 
 .footer {
-    background-color: #192248;
-    color: white;
+    background-color: var(--bg-page);
+    border-top: 1px solid var(--border-color-soft);
+    color: var(--text-secondary);
     padding: 40px 20px;
-    font-family: 'Sansita', sans-serif; /* Apply Sansita font */
+    font-family: var(--font-heading);
     text-align: center;
 }
 
@@ -18,15 +18,15 @@
 }
 
 .footer-nav a {
-    color: white;
+    color: var(--text-secondary);
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1rem;
-    font-weight: bold;
+    margin: 0 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .footer-nav a:hover {
-    color: #FF6600; /* Orange color on hover */
+    color: var(--accent);
 }
 
 .footer-social {
@@ -39,20 +39,22 @@
 }
 
 .footer-social img {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
+    opacity: 0.85;
 }
 
 .footer-info {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .footer-info p {
-    margin: 10px 0;
+    margin: 6px 0;
+    color: var(--text-muted);
 }
 
 .footer-info a {
-    color: #FF6600;
+    color: var(--accent);
     text-decoration: none;
 }
 
@@ -60,50 +62,10 @@
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .footer-nav a {
-        margin: 0 10px; /* Reduce margin for medium screens */
-        font-size: 0.9rem; /* Adjust font size */
-    }
-    .footer-social img {
-        width: 20px; /* Reduce size of social icons */
-        height: 20px;
-    }
-}
-
 @media (max-width: 768px) {
-    .footer {
-        padding: 30px 15px; /* Reduce padding */
-    }
     .footer-nav a {
-        display: block;
-        margin: 10px 0; /* Stack links vertically */
-        font-size: 0.9rem; /* Adjust font size */
-    }
-    .footer-social img {
-        width: 18px; /* Further reduce size of social icons */
-        height: 18px;
-    }
-    .footer-info {
-        font-size: 0.8rem; /* Adjust font size */
+        display: inline-block;
+        margin: 6px 8px;
+        font-size: 0.85rem;
     }
 }
-
-@media (max-width: 480px) {
-    .footer {
-        padding: 20px 10px; /* Further reduce padding */
-    }
-    .footer-nav a {
-        margin: 8px 0; /* Reduce margin for very small screens */
-        font-size: 0.8rem; /* Further adjust font size */
-    }
-    .footer-social img {
-        width: 16px; /* Smallest size for social icons */
-        height: 16px;
-    }
-    .footer-info {
-        font-size: 0.7rem; /* Smallest font size */
-    }
-}
-

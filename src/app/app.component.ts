@@ -3,6 +3,8 @@ import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router
 import { HeroComponent } from "./hero/hero.component";
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { CertificationsComponent } from './certifications/certifications.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ServicesComponent } from "./services/services.component";
 import { ContactComponent } from "./contact/contact.component";
@@ -15,7 +17,7 @@ import { NavigationService } from './navigation.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,  HeroComponent, AboutComponent, SkillsComponent, ProjectsComponent, ServicesComponent, ContactComponent, FooterComponent,RouterLink],
+  imports: [RouterOutlet, HeroComponent, AboutComponent, SkillsComponent, ExperienceComponent, CertificationsComponent, ProjectsComponent, ServicesComponent, ContactComponent, FooterComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
